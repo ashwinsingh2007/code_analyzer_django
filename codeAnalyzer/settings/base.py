@@ -54,7 +54,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000"
+    "http://localhost:3000",
+    'https://master.d7lv44ck2c2dg.amplifyapp.com'
 ]
 
 ROOT_URLCONF = 'codeAnalyzer.urls'
