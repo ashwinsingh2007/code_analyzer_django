@@ -55,7 +55,8 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
-    'https://master.d7lv44ck2c2dg.amplifyapp.com'
+    'https://master.d7lv44ck2c2dg.amplifyapp.com',
+    'http://ashwin-react-app.s3-website.ap-south-1.amazonaws.com',
 ]
 
 ROOT_URLCONF = 'codeAnalyzer.urls'
