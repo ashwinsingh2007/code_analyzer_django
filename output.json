@@ -1,0 +1,12 @@
+[
+    {
+        "description": "User controlled data in 'unserialize()' or 'deserialize()' function can result in Object Injection or Remote Code Injection.",
+        "filename": "javascriptTest.js",
+        "line": 12,
+        "lines": "        app.use(cookieParser())\n\n        app.get('/', function(req, res) {\n                    if (req.cookies.profile) {\n                        var str = new Buffer(req.cookies.profile, 'base64').toString();\n                        var obj = serialize.unserialize(str);\n                        if (obj.username) {\n                            res.send(\"Hello \" + escape(obj.username));\n                        }\n                    } else {",
+        "path": "javascriptTest.js",
+        "sha2": "48d6c1c4a0f159ed2f94d9c26ca5e6d9604417c236b5a3e35be3d9edb42b1ee8",
+        "tag": "rci",
+        "title": "Deserialization Remote Code Injection"
+    }
+]
