@@ -43,5 +43,9 @@ def index(request):
 def github_webhook(request):
     print('hit');
     print('Request: ');
-    print(request);
+    event_type = request.headers["X-GitHub-Event"]
+    payload    = request.body;
+    print('hit payload');
+    print(payload);
+
     return HttpResponse(json.dumps({'tested': 'ok'}), content_type='application/json');
