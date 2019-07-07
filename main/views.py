@@ -41,6 +41,7 @@ def index(request):
     # return HttpResponse(shell_output);
 
 def github_webhook(request):
+    print('hit');
     print('Request: ');
     print(request);
     return HttpResponse(json.dumps({'tested': 'ok'}), content_type='application/json');
