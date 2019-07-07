@@ -19,7 +19,7 @@ import simplejson as json
 def index(request):
     json_object = json.loads(request.body)
     data  = json_object['data']['code']
-    f = open("javascriptTest.js", "w")
+    f = open("javascriptTest.js", "w");
     f.write(data);
     f.close()
  
@@ -46,7 +46,8 @@ def github_webhook(request):
     print('Request: ');
     event_type = request.headers["X-GitHub-Event"]
     payload    = json.loads(request.body);
-    print('hit payload');
+    repo = Repo(repo_path)
+    print('hit payload', 'event_type', event_type);
     print(payload);
 
     return HttpResponse(json.dumps(payload), content_type='application/json');
