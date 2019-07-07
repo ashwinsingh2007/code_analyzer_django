@@ -46,7 +46,7 @@ def github_webhook(request):
     print('Request: ');
     event_type = request.headers["X-GitHub-Event"]
     payload    = json.loads(request.body);
-    repo = Repo(repo_path)
+    # repo = Repo(repo_path)
     print('hit payload', 'event_type', event_type);
     print(payload);
 
