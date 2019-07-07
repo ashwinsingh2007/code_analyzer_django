@@ -44,7 +44,7 @@ def github_webhook(request):
     print('hit');
     print('Request: ');
     event_type = request.headers["X-GitHub-Event"]
-    payload    = request.body;
+    payload    = json.loads(request.body);
     print('hit payload');
     print(payload);
 
