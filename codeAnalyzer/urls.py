@@ -20,4 +20,5 @@ from main import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('runcommand/', views.index),
+    path('github/', views.github_webhook),
 ]
