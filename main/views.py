@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from git import Repo
 import os
 import subprocess
 # import json
@@ -48,4 +49,4 @@ def github_webhook(request):
     print('hit payload');
     print(payload);
 
-    return HttpResponse(json.dumps({'tested': 'ok'}), content_type='application/json');
+    return HttpResponse(json.dumps(payload), content_type='application/json');
