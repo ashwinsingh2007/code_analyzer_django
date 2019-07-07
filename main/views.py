@@ -39,8 +39,9 @@ def index(request):
     }
     return HttpResponse(json.dumps(responseData), content_type='application/json');
     # return HttpResponse(shell_output);
-
+@csrf_exempt 
 def github_webhook(request):
+    print('hit');
     print('Request: ');
     print(request);
     return HttpResponse(json.dumps({'tested': 'ok'}), content_type='application/json');
